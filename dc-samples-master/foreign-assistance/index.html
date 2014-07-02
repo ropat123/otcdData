@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>OTCD Study</title>
+
+    <script src='../lib/d3.js' type='text/javascript'></script>
+    <script src='../lib/crossfilter.js' type='text/javascript'></script>
+    <script src='../lib/dc.js' type='text/javascript'></script>
+    <script src='../lib/bootstrap.min.js' type='text/javascript'></script>
+    <script src='js/otcdData.js' type='text/javascript'></script>
+
+    <link href='css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='css/dc.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class='container' style='font: 10px sans-serif;'>
+        <div class='row'>
+            <div class='span12'>
+                <div class="dc-data-count" style="float: left;"> 
+                    <h4>OTC Deficiency Lab Values | <span> <a href="javascript:dc.filterAll(); dc.renderAll();">Reset</a></span> </h4> 
+                    <h5><span id="dc-chart-total"></span></h5>   
+                </div>
+            </div>
+        </div>
+
+        <div class='row'> 
+             <div class='span8' id='dc-chart-appropriationType'><h5>Age vs. GPC Level</h5></div>           
+        </div>
+
+        <div class='row'> 
+            <div class='span4' id='dc-chart-patientType'><h4>Patient Type</h4></div>
+        	<h5><div class='span4' id='dc-chart-glutamateLevel'><h4>Glutamate Level</h4></div></h5>
+            <h5><div class='span4' id='dc-chart-gpcLevel'><h4>GPC Level</h4></div></h5>
+            <h5> <div class='span4' id='dc-chart-glutamineLevel'><h4>Glutamine Level</h4></div></h5>
+            <h5> <div class='span4' id='dc-chart-myoInositolLevel'><h4>MyoInositol Level</h4></div></h5>
+            
+         
+            <div class='span8'>
+                <div class='row'>
+                    <h5><div class='span4' id='dc-chart-naaLevel'><h4>NAA Level</h4></div></h5>
+                    <h5><div class='span4' id='dc-chart-glutamylLevel'><h4>Glutamyl Level</h4></div></h5>
+                    <h5> <font color="red"><div class='span4' id='dc-chart-naacreatineRatio'><h4>NAA/Creatine Ratio</h4></font></div></h5>
+                    <h5> <font color="red"><div class='span4' id='dc-chart-micrRatio'><h4>MyoInositol/Creatine Ratio</h4></font></div></h5>
+                    <h5> <font color="purple"><div class='span4' id='dc-chart-creatineLevel'><h4>Creatine Mean</h4></font></div></h5>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
